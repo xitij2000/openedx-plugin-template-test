@@ -93,7 +93,10 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     entry_points={
-        "openedx.template_includes": [
+        "lms.template_includes": [
+            "test_template_include = test_template_plugin.plugin:TestPlugin"
+        ],
+        "studio.template_includes": [
             "test_template_include = test_template_plugin.plugin:TestPlugin"
         ],
     }
