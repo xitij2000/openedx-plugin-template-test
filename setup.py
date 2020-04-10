@@ -93,11 +93,11 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     entry_points={
-        "lms.template_includes": [
-            "test_template_include = test_template_plugin.plugin:TestPlugin"
+        "lms.djangoapp": [
+            "test_slots = test_template_plugin.apps:TestTemplatePluginConfig"
         ],
-        "studio.template_includes": [
-            "test_template_include = test_template_plugin.plugin:TestPlugin"
-        ],
+        "studio.djangoapp": [
+            "test_slots = test_template_plugin.apps:TestTemplatePluginConfig"
+        ]
     }
 )

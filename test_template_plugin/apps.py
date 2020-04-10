@@ -14,3 +14,18 @@ class TestTemplatePluginConfig(AppConfig):
     """
 
     name = 'test_template_plugin'
+
+    plugin_app = {
+        'slots_config': {
+            'lms.djangoapp': {
+                'head-extra': 'test_template_plugin.plugin.head_extra_slot',
+                'body-initial': 'test_template_plugin.plugin.body_initial_slot',
+                'body-extra': 'test_template_plugin.plugin.body_extra_slot',
+            },
+            'studio.djangoapp': {
+                'head-extra': 'test_template_plugin.plugin.head_extra_slot',
+                'body-initial': 'test_template_plugin.plugin.body_initial_slot',
+                'body-extra': 'test_template_plugin.plugin.body_extra_slot',
+            }
+        }
+    }
